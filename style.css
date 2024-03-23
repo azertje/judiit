@@ -1,6 +1,8 @@
 :root {
-  --bg: #b6ccfe;
-  --darkest-blue: #545e75;
+  --pastel-blue: #8FB2C5;
+  --pastel-pink: #F0C5D3;
+  --beige: #F3F1F0;
+  --text: #333333;
 }
 
 /* Box sizing rules */
@@ -82,7 +84,7 @@ select {
 }
 
 main {
-  background-color: var(--bg);
+  background-color: var(--pastel-blue);
   font-size: 1rem;
   width: 100%;
   height: 100%;
@@ -92,10 +94,21 @@ main {
   margin: 2rem auto;
   max-width: 400px;
   padding: 2rem;
+  position: relative;
+}
+.letter-container img {
+  width: 100px;
+  position: absolute;
+  top: -110px;
+  right: 50%;
+  transform: translateX(50%);
 }
 .letter-text {
   margin: 4rem 0;
-  color: var(--darkest-blue);
+  color: var(--text);
+}
+.letter-text p {
+  margin-bottom: 10px;
 }
 
 /* ! Modal */
@@ -145,6 +158,33 @@ video {
 #hiddenP {
   display: none;
 }
+h2, h3 {
+  color: var(--text);
+  position: relative;
+  line-height: 1.3;
+  margin-top: 2rem;
+}
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    height: 3px;
+    width: 80px;
+}
+.adventure-h2::before, .letter-h2::before {
+  background: var(--beige);
+}
+.adventure-h2 span, .letter-h2 span {
+  color: var(--beige);
+  font-size: 2rem;
+}
+.video-h2::before {
+  background: var(--pastel-blue);
+}
+.video-h2 span {
+  color: var(--pastel-blue);
+}
 
 .hero {
   height: 100vh;
@@ -152,21 +192,36 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e2eafc;
+  background-color: var(--beige);
+  position: relative;
+}
+.hero img {
+  position: absolute;
+  top: 12%;
+  right: -25%;
+  z-index: 1;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  line-height: 0.92;
   padding: 20px;
-  color: #758bfd;
+  padding-top: 100px;
+  color: var(--text);
+  transform:scale(1.5,1.1);
+  display: inline-block;
+  letter-spacing: 1px;
+  font-family: 'Anton';
+  margin-left: 65px;
 }
 
 /* CSS */
 .button-74 {
-  background-color: #d7e3fc;
-  border: 2px solid #abc4ff;
+  background-color: #F1F1F1;
+  border: 2px solid var(--pastel-blue);
   border-radius: 30px;
-  box-shadow: #abc4ff 4px 4px 0 0;
-  color: #758bfd;
+  box-shadow: var(--pastel-blue) 4px 4px 0 0;
+  color: var(--pastel-blue);
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
@@ -179,6 +234,8 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 300px;
+  margin:0 auto;
+  display:block;
   margin-top: 200px;
 }
 
@@ -187,7 +244,7 @@ h1 {
 }
 
 .button-74:active {
-  box-shadow: #abc4ff 2px 2px 0 0;
+  box-shadow: var(--pastel-blue) 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
@@ -195,35 +252,77 @@ h1 {
   width: 0;
   height: 0;
   border-right: 100vw solid transparent;
-  border-bottom: 13.9vw solid var(--bg);
+  border-bottom: 13.9vw solid var(--pastel-blue);
   margin-top: -13.9vw;
+  position: relative;
 }
 .separator2 {
   width: 0;
   height: 0;
   border-right: 100vw solid transparent;
-  border-bottom: 13.9vw solid #D7E3FC;
+  border-bottom: 13.9vw solid var(--beige);
   margin-top: -13.9vw;
+}
+.separator3 {
+  width: 0;
+  height: 0;
+  border-right: 100vw solid transparent;
+  border-bottom: 13.9vw solid var(--pastel-pink);
+  margin-top: -13.9vw;
+  position: relative
 }
 
 #video-section {
-  background-color: #D7E3FC;
+  background-color: var(--beige);
   padding: 2rem;
-  min-height: 400px;
+  min-height: 600px;
+  position: relative;
+}
+#video-section h2 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+#video-section img {
+  width: 100px;
+  position: absolute;
+  top: -70px;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 #videoBtn {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #adventure-section {
   padding: 2rem;
+  position: relative;
+  background-color: var(--pastel-pink);
+  min-height: 600px;
+}
+#adventure-section h2 {
+  margin-top: 4rem;
+}
+#adventure-section #present {
+  width: 150px;
+  position: absolute;
+  top: -130px;
+  right: 35%;
+  transform: translateX(50%);
+  transform: rotate(-20deg);
+}
+#adventure-section #dog {
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 20px
 }
 .timer-container {
   text-align: center;
   width: 100%;
-  padding: 150px 0;
+  padding: 6rem 0;
+  color: var(--text);
 }
 #demo {
   display: flex;
@@ -234,8 +333,8 @@ h3 {
 }
 .demo-style {
   font-family: "Chonburi", serif;
-  font-size: 3rem;
-  line-height: 0.5;
+  font-size: 4rem;
+  line-height: 0.4;
 }
 .demo-style span {
   font-family: 'Roboto', system-ui, sans-serif;
@@ -244,6 +343,28 @@ h3 {
 
 footer {
   text-align: center;
-  padding: 50px 0;
-  background-color: var(--bg);
+  padding: 100px 0 20px 0;
+  background-color: var(--pastel-pink);
+  display: flex;
+  justify-content: center;
+  color: var(--beige);
+}
+
+footer img {
+  width: 1.5rem;
+  margin-left: 5px;
+}
+
+.desktop {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  color: var(--beige);
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .desktop {
+    display: block;
+  }
 }

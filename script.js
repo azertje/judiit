@@ -27,7 +27,7 @@ window.onclick = function(event) {
   }
 }
 
-const targetDate = new Date("2024-03-29T08:00:00");
+const targetDate = new Date("2024-03-29T11:00:00");
 // Define a function to update the countdown timer
 function updateCountdown() {
   // Get the current date and time
