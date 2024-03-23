@@ -194,6 +194,7 @@ h2::before {
   align-items: center;
   background-color: var(--beige);
   position: relative;
+  overflow: hidden;
 }
 .hero img {
   position: absolute;
