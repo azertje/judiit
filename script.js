@@ -37,9 +37,12 @@ function updateCountdown() {
   // Convert the time difference to seconds
   const totalSeconds = Math.floor(timeDifference / 1000);
   // Calculate the remaining hours, minutes, and seconds
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = Math.floor(totalSeconds % 60);
+  const hours = 0;
+  const minutes = 0;
+  const seconds = 0;
+  // const hours = Math.floor(totalSeconds / 3600);
+  // const minutes = Math.floor((totalSeconds % 3600) / 60);
+  // const seconds = Math.floor(totalSeconds % 60);
   // Display the countdown timer
   document.getElementById("demo-hours").innerHTML = `${hours} <br><span>HORES</span>`;
   document.getElementById("demo-minutes").innerHTML = `${minutes} <br><span>MINUTS</span`;
